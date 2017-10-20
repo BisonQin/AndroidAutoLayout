@@ -8,15 +8,19 @@
     <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
         <item name="android:textSize">32px</item>
     </style>
+
+    <!-- 默认的Toolbar菜单样式 -->
     <style name="ToolBarMenuStyle" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="actionMenuTextColor">@android:color/darker_gray</item>
         <item name="android:textSize">50px</item>
     </style>
 
+    <!-- 默认的Toolbar标题字体样式 -->
     <style name="ToolbarTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textSize">60px</item>
+        <item name="android:textSize">50px</item>
     </style>
 
+    <!-- 默认的Toolbar副标题字体样式 -->
     <style name="ToolbarSubTitleTextAppearance" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
         <item name="android:textSize">40px</item>
     </style>

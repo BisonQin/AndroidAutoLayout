@@ -10,10 +10,10 @@ import com.zhy.autolayout.utils.ScreenUtils;
 /**
  * Created by zhy on 15/11/18.
  */
-public class AutoLayoutConifg
+public class AutoLayoutConfig
 {
 
-    private static AutoLayoutConifg sIntance = new AutoLayoutConifg();
+    private static AutoLayoutConfig sIntance = new AutoLayoutConfig();
 
 
     private static final String KEY_DESIGN_WIDTH = "design_width";
@@ -28,7 +28,7 @@ public class AutoLayoutConifg
     private boolean useDeviceSize;
 
 
-    private AutoLayoutConifg()
+    private AutoLayoutConfig()
     {
     }
 
@@ -41,14 +41,14 @@ public class AutoLayoutConifg
         }
     }
 
-    public AutoLayoutConifg useDeviceSize()
+    public AutoLayoutConfig useDeviceSize()
     {
         useDeviceSize = true;
         return this;
     }
 
 
-    public static AutoLayoutConifg getInstance()
+    public static AutoLayoutConfig getInstance()
     {
         return sIntance;
     }

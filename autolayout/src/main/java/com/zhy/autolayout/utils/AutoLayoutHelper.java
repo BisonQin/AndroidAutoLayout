@@ -41,7 +41,7 @@ import com.zhy.autolayout.attr.PaddingRightAttr;
 import com.zhy.autolayout.attr.PaddingTopAttr;
 import com.zhy.autolayout.attr.TextSizeAttr;
 import com.zhy.autolayout.attr.WidthAttr;
-import com.zhy.autolayout.config.AutoLayoutConifg;
+import com.zhy.autolayout.config.AutoLayoutConfig;
 
 public class AutoLayoutHelper
 {
@@ -92,7 +92,7 @@ public class AutoLayoutHelper
     /**
      * move to other place?
      */
-    private static AutoLayoutConifg mAutoLayoutConifg;
+    private static AutoLayoutConfig mAutoLayoutConifg;
 
     public AutoLayoutHelper(ViewGroup host)
     {
@@ -107,14 +107,14 @@ public class AutoLayoutHelper
 
     private void initAutoLayoutConfig(ViewGroup host)
     {
-        mAutoLayoutConifg = AutoLayoutConifg.getInstance();
+        mAutoLayoutConifg = AutoLayoutConfig.getInstance();
         mAutoLayoutConifg.init(host.getContext());
     }
 
 
     public void adjustChildren()
     {
-        AutoLayoutConifg.getInstance().checkParams();
+        AutoLayoutConfig.getInstance().checkParams();
 
         for (int i = 0, n = mHost.getChildCount(); i < n; i++)
         {

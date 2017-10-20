@@ -28,9 +28,9 @@ public class AutoActionMenuItemView extends ActionMenuItemView {
 
     public AutoActionMenuItemView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.Theme,
+        TypedArray a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.AppCompatTheme,
                 defStyle, R.style.ThemeOverlay_AppCompat);
-        int menuTextAppearance = a.getResourceId(R.styleable.Theme_actionBarTheme,
+        int menuTextAppearance = a.getResourceId(R.styleable.AppCompatTheme_actionBarTheme,
                 R.style.ThemeOverlay_AppCompat_ActionBar);
         mMenuTextSize = loadTextSizeFromTextAppearance(menuTextAppearance);
         a.recycle();

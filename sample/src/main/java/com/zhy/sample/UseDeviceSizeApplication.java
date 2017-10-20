@@ -2,7 +2,7 @@ package com.zhy.sample;
 
 import android.app.Application;
 
-import com.zhy.autolayout.config.AutoLayoutConifg;
+import com.zhy.autolayout.config.AutoLayoutConfig;
 
 /**
  * Created by zhy on 15/12/23.
@@ -13,6 +13,6 @@ public class UseDeviceSizeApplication extends Application
     public void onCreate()
     {
         super.onCreate();
-        AutoLayoutConifg.getInstance().useDeviceSize().init(this);
+        AutoLayoutConfig.getInstance().useDeviceSize().init(this);
     }
 }

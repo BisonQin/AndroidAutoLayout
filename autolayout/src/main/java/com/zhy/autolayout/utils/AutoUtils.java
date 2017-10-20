@@ -6,7 +6,7 @@ import com.zhy.autolayout.AutoLayoutInfo;
 import com.zhy.autolayout.R;
 import com.zhy.autolayout.attr.Attrs;
 import com.zhy.autolayout.attr.AutoAttr;
-import com.zhy.autolayout.config.AutoLayoutConifg;
+import com.zhy.autolayout.config.AutoLayoutConfig;
 
 /**
  * Created by zhy on 15/12/4.
@@ -89,31 +89,31 @@ public class AutoUtils
 
     public static float getPercentWidth1px()
     {
-        int screenWidth = AutoLayoutConifg.getInstance().getScreenWidth();
-        int designWidth = AutoLayoutConifg.getInstance().getDesignWidth();
+        int screenWidth = AutoLayoutConfig.getInstance().getScreenWidth();
+        int designWidth = AutoLayoutConfig.getInstance().getDesignWidth();
         return 1.0f * screenWidth / designWidth;
     }
 
     public static float getPercentHeight1px()
     {
-        int screenHeight = AutoLayoutConifg.getInstance().getScreenHeight();
-        int designHeight = AutoLayoutConifg.getInstance().getDesignHeight();
+        int screenHeight = AutoLayoutConfig.getInstance().getScreenHeight();
+        int designHeight = AutoLayoutConfig.getInstance().getDesignHeight();
         return 1.0f * screenHeight / designHeight;
     }
 
 
     public static int getPercentWidthSize(int val)
     {
-        int screenWidth = AutoLayoutConifg.getInstance().getScreenWidth();
-        int designWidth = AutoLayoutConifg.getInstance().getDesignWidth();
+        int screenWidth = AutoLayoutConfig.getInstance().getScreenWidth();
+        int designWidth = AutoLayoutConfig.getInstance().getDesignWidth();
         return (int) (val * 1.0f / designWidth * screenWidth);
     }
 
 
     public static int getPercentWidthSizeBigger(int val)
     {
-        int screenWidth = AutoLayoutConifg.getInstance().getScreenWidth();
-        int designWidth = AutoLayoutConifg.getInstance().getDesignWidth();
+        int screenWidth = AutoLayoutConfig.getInstance().getScreenWidth();
+        int designWidth = AutoLayoutConfig.getInstance().getDesignWidth();
 
         int res = val * screenWidth;
         if (res % designWidth == 0)
@@ -128,8 +128,8 @@ public class AutoUtils
 
     public static int getPercentHeightSizeBigger(int val)
     {
-        int screenHeight = AutoLayoutConifg.getInstance().getScreenHeight();
-        int designHeight = AutoLayoutConifg.getInstance().getDesignHeight();
+        int screenHeight = AutoLayoutConfig.getInstance().getScreenHeight();
+        int designHeight = AutoLayoutConfig.getInstance().getDesignHeight();
 
         int res = val * screenHeight;
         if (res % designHeight == 0)
@@ -143,8 +143,8 @@ public class AutoUtils
 
     public static int getPercentHeightSize(int val)
     {
-        int screenHeight = AutoLayoutConifg.getInstance().getScreenHeight();
-        int designHeight = AutoLayoutConifg.getInstance().getDesignHeight();
+        int screenHeight = AutoLayoutConfig.getInstance().getScreenHeight();
+        int designHeight = AutoLayoutConfig.getInstance().getDesignHeight();
 
         return (int) (val * 1.0f / designHeight * screenHeight);
     }

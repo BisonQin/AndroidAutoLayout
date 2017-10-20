@@ -2,6 +2,7 @@ package com.zhy.autolayout.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -15,9 +16,7 @@ import com.zhy.autolayout.utils.DimenUtils;
 
 import java.lang.reflect.Field;
 
-/**
- * Created by hupei on 2015/12/28 20:33.
- */
+
 public class AutoToolbar extends Toolbar {
     private static final int NO_VALID = -1;
     private int mTextSize;
@@ -38,9 +37,9 @@ public class AutoToolbar extends Toolbar {
         mTextSize = loadTextSizeFromTextAppearance(titleTextAppearance);
         mSubTextSize = loadTextSizeFromTextAppearance(subtitleTextAppearance);
 
-        TypedArray menuA = context.getTheme().obtainStyledAttributes(attrs, R.styleable.Theme,
+        TypedArray menuA = context.getTheme().obtainStyledAttributes(attrs, R.styleable.AppCompatTheme,
                 defStyleAttr, R.style.ThemeOverlay_AppCompat);
-        int menuTextAppearance = menuA.getResourceId(R.styleable.Theme_actionBarTheme,
+        int menuTextAppearance = menuA.getResourceId(R.styleable.AppCompatTheme_actionBarTheme,
                 R.style.ThemeOverlay_AppCompat_ActionBar);
         int menuTextSize = loadTextSizeFromTextAppearance(menuTextAppearance);
 
